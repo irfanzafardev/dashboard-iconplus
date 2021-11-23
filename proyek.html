@@ -24,6 +24,7 @@
   <link href="css/sidebar-style.css" rel="stylesheet">
   <link href="css/table.css" rel="stylesheet">
   <link href="css/progress.css" rel="stylesheet">
+  <link href="css/notification.css" rel="stylesheet">
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -331,6 +332,9 @@
             </li>
 
             <!-- Nav Item - Alerts -->
+            
+            
+
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -344,104 +348,33 @@
                 <h6 class="dropdown-header">
                   Alerts Center
                 </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="badge badge-primary text-white badge-counter">
-                      <i class="fas fa-file-alt text-white"></i>
+                <div class="dropdown-item align-items-center" href="#">
+                  <div class="row">
+                    <div class="col-2">
+                      <div class="mr-3">
+                        <div class="icon-circle bg-primary">
+                          <i class="fas fa-file-alt text-white"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div>
+                        <div class="small text-gray-500">October 04, 2021</div>
+                        <span class="font-weight-bold">New progress updated</span>
+                      </div>
+                    </div>
+                    <div class="col-2 d-flex">
+                      <div class="check-icon p-0 my-auto mx-auto">
+                        <a class="icon-background bg-primary my-1 d-flex" id="check-icon" href="#">
+                          <i class="fas fa-check mx-auto my-auto"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div class="small text-gray-500">October 04, 2021</div>
-                    <span class="font-weight-bold">New progress updated</span>
-                  </div>
-                </a>
-                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a> -->
+                </div>
               </div>
             </li>
 
-            <!-- Nav Item - Messages -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <!-- <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                Counter - Messages
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a> -->
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                  Message Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                      problem I've been having.</div>
-                    <div class="small text-gray-500">Emily Fowler · 58m</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                    <div class="status-indicator"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how
-                      would you like them sent to you?</div>
-                    <div class="small text-gray-500">Jae Chun · 1d</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
-                    <div class="status-indicator bg-warning"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with
-                      the progress so far, keep up the good work!</div>
-                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                      told me that people say this to all dogs, even if they aren't good...</div>
-                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-              </div>
-            </li>
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -481,6 +414,10 @@
               <div class="card-header border-0 py-3">
                 <h6 class="m-0 heading-2">Data Proyek</h6>
               </div>
+
+
+
+
               <div class="table-responsive p-3">
                 <table class="table fold-table" id="dataTable" width="100%" cellspacing="0">
                   <thead>
@@ -502,6 +439,7 @@
                       <td class="align-middle btn-nesting-1" id="tableButton">
                         <i class="fas fa-chevron-down arrow"></i>
                       </td>
+<<<<<<< HEAD
                       <td class="align-middle">1</td>
                       <td class="align-middle">Penginstalan Aplikasi</td>
                       <td class="align-middle">33220</td>
@@ -510,6 +448,64 @@
                       <td class="align-middle">2021-11-18</td>
                       <td class="align-middle">12</td>
                       <td class="align-middle">PM</td>
+                      <td><button type="button" class="btn btn-blue review-button text-white" id="menu-btn">Review</button></td>
+                    </tr>
+                    <tr class="fold" id="fold-table">
+                      <td colspan="7">
+                        <div class="fold-content">
+                          <div class="card-header border-0 py-3">
+                            <h6 class="m-0 heading-2">Weekly Report</h6>
+                          </div>
+                          <table class="fold-table">
+                            <thead>
+                              <tr>
+                                <th>No</th>
+                                <th>Tanggal</th>
+                                <th>Laporan</th>
+                                <th>Catatan</th>
+                                <th>Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>2021-11-17</td>
+                                <td>-</td>
+                                <td>Jaringan sudah dibuat</td>
+                                <td>Selesai</td>
+                              </tr>
+
+                              <tr>
+                                <td>2</td>
+                                <td>2021-11-18</td>
+                                <td>-</td>
+                                <td>Jaringan dalam penginstallan</td>
+                                <td>Dalam Pekerjaan</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="view view-2" id="view-table">
+                      <td class="align-middle btn-nesting-2" id="tableButton">
+                        <i class="fas fa-chevron-down arrow-2"></i>
+                      </td>
+=======
+>>>>>>> 00bd510033453e8ecdd5de2b108736cfe820e036
+                      <td class="align-middle">1</td>
+                      <td class="align-middle">Penginstalan Aplikasi</td>
+                      <td class="align-middle">33220</td>
+                      <td class="align-middle">Melakukan Penginstalan Jaringan</td>
+                      <td class="align-middle">2021-11-17</td>
+                      <td class="align-middle">2021-11-18</td>
+                      <td class="align-middle">12</td>
+                      <td class="align-middle">PM</td>
+<<<<<<< HEAD
+                      <td><button type="button" class="btn btn-blue review-button-2 text-white" id="menu-btn-2">Review</button></td>
+                    </tr>
+                    <tr class="fold" id="fold-table">
+=======
                       <td><button type="button" class="btn btn-blue review-button text-white" id="menu-btn">Review</button></td>
                     </tr>
                     <tr class="fold" id="fold-table">
@@ -564,6 +560,7 @@
                       <td><button type="button" class="btn btn-blue review-button-2 text-white" id="menu-btn-2">Review</button></td>
                     </tr>
                     <tr class="fold" id="fold-table">
+>>>>>>> 00bd510033453e8ecdd5de2b108736cfe820e036
                       <td colspan="7">
                         <div class="fold-content">
                           <div class="card-header border-0 py-3">
@@ -717,6 +714,15 @@
   </script>
 
   <script>
+<<<<<<< HEAD
+    $(function () {
+      $(".icon-background").on("click", function () {
+        $(this).toggleClass('bg-primary bg-success');
+      });
+    });
+    
+=======
+>>>>>>> 00bd510033453e8ecdd5de2b108736cfe820e036
     // Manipulasi Review Sidebar
     var menu_btn = document.querySelector("#menu-btn")
     var menu_btn_close = document.querySelector("#menu-btn-close")
