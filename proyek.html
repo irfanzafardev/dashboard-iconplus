@@ -471,13 +471,6 @@
         <!-- End of Topbar -->
 
 
-        <div class="container-fluid">
-  
-          <!-- Content Row -->
-
-        </div>
-
-
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
@@ -492,6 +485,7 @@
                 <table class="table fold-table" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
+                      <th></th>
                       <th>No</th>
                       <th>Nama Program</th>
                       <th>Web Code</th>
@@ -504,7 +498,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="view">
+                    <tr class="view view-1" id="view-table">
+                      <td class="align-middle btn-nesting-1" id="tableButton">
+                        <i class="fas fa-chevron-down arrow"></i>
+                      </td>
                       <td class="align-middle">1</td>
                       <td class="align-middle">Penginstalan Aplikasi</td>
                       <td class="align-middle">33220</td>
@@ -513,9 +510,9 @@
                       <td class="align-middle">2021-11-18</td>
                       <td class="align-middle">12</td>
                       <td class="align-middle">PM</td>
-                      <td><button type="button" class="btn btn-blue text-white" id="menu-btn">Review</button></td>
+                      <td><button type="button" class="btn btn-blue review-button text-white" id="menu-btn">Review</button></td>
                     </tr>
-                    <tr class="fold">
+                    <tr class="fold" id="fold-table">
                       <td colspan="7">
                         <div class="fold-content">
                           <div class="card-header border-0 py-3">
@@ -552,7 +549,57 @@
                         </div>
                       </td>
                     </tr>
-  
+                    <tr class="view view-2" id="view-table">
+                      <td class="align-middle btn-nesting-2" id="tableButton">
+                        <i class="fas fa-chevron-down arrow-2"></i>
+                      </td>
+                      <td class="align-middle">1</td>
+                      <td class="align-middle">Penginstalan Aplikasi</td>
+                      <td class="align-middle">33220</td>
+                      <td class="align-middle">Melakukan Penginstalan Jaringan</td>
+                      <td class="align-middle">2021-11-17</td>
+                      <td class="align-middle">2021-11-18</td>
+                      <td class="align-middle">12</td>
+                      <td class="align-middle">PM</td>
+                      <td><button type="button" class="btn btn-blue review-button-2 text-white" id="menu-btn-2">Review</button></td>
+                    </tr>
+                    <tr class="fold" id="fold-table">
+                      <td colspan="7">
+                        <div class="fold-content">
+                          <div class="card-header border-0 py-3">
+                            <h6 class="m-0 heading-2">Weekly Report</h6>
+                          </div>
+                          <table class="fold-table">
+                            <thead>
+                              <tr>
+                                <th>No</th>
+                                <th>Tanggal</th>
+                                <th>Laporan</th>
+                                <th>Catatan</th>
+                                <th>Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>2021-11-17</td>
+                                <td>-</td>
+                                <td>Jaringan sudah dibuat</td>
+                                <td>Selesai</td>
+                              </tr>
+
+                              <tr>
+                                <td>2</td>
+                                <td>2021-11-18</td>
+                                <td>-</td>
+                                <td>Jaringan dalam penginstallan</td>
+                                <td>Dalam Pekerjaan</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -650,14 +697,27 @@
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
+    // Manipulasi Nesting Table (jQuery)
     $(function () {
-      $(".fold-table tr.view").on("click", function () {
-        $(this).toggleClass("open").next(".fold").toggleClass("open");
+      $(".btn-nesting-1").on("click", function () {
+        $(".fold-table tr.view-1").toggleClass("open").next(".fold").toggleClass("open");
+        $(".review-button").toggleClass("text-white");
+        $('.arrow').toggleClass('fa-chevron-down fa-chevron-up');
       });
     });
+
+    $(function () {
+      $(".btn-nesting-2").on("click", function () {
+        $(".fold-table tr.view-2").toggleClass("open").next(".fold").toggleClass("open");
+        $(".review-button-2").toggleClass("text-white");
+        $('.arrow-2').toggleClass('fa-chevron-down fa-chevron-up');
+      });
+    });
+    // Akhir Manipulasi Nesting Table
   </script>
 
   <script>
+    // Manipulasi Review Sidebar
     var menu_btn = document.querySelector("#menu-btn")
     var menu_btn_close = document.querySelector("#menu-btn-close")
     var sidebar = document.querySelector("#sidebar")
@@ -665,16 +725,23 @@
     menu_btn.addEventListener("click", () => {
       sidebar.classList.toggle("active-nav")
     })
-    // var menu_btn_2 = document.querySelector("#menu-btn-2")
-    // menu_btn_2.addEventListener("click", () => {
-    //     sidebar.classList.toggle("active-nav")
-    //     container.classList.toggle("active-cont")
-    // })
+
     menu_btn_close.addEventListener("click", () => {
       sidebar.classList.toggle("active-nav")
       container.classList.toggle("active-cont")
     })
 
+    var menu_btn_2 = document.querySelector("#menu-btn-2")
+    var sidebar = document.querySelector("#sidebar")
+    var container = document.querySelector(".my-container")
+    menu_btn_2.addEventListener("click", () => {
+      sidebar.classList.toggle("active-nav")
+    })
+
+    // Akhir Manipulasi Review Sidebar
+
+
+    // Manipulasi Reply form
     var reply_btn = document.querySelector("#reply-btn")
     var reply_btn_2 = document.querySelector("#reply-btn-2")
     var reply_form = document.querySelector("#reply-form")
@@ -684,15 +751,15 @@
     reply_btn_2.addEventListener("click", () => {
       reply_form.classList.toggle("active-form")
     })
+    // akhir Manipulasi Reply form
 
+    // Manipulasi Progress bar
     const progress = document.querySelector('.progress-done');
-    // progress.style.width = progress.getAttribute('data-done') + '%';
-    // progress.style.opacity = 1;
-
     setTimeout(() => {
       progress.style.opacity = 1;
       progress.style.width = progress.getAttribute('data-done') + '%';
     }, 10)
+    // Akhir Manipulasi Progress bar
   </script>
 </body>
 
