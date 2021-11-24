@@ -267,3 +267,20 @@
   }
 }
 
+.check-icon {
+  height: 30px;
+  width: 30px;
+  a {
+    border-radius: 30px;
+    width: 24px;
+    height: 24px;
+
+    .fa-check {
+      padding: 2px 0 0 0;
+      color: #fff;
+      font-size: 10px;
+    }
+  }
+  
+}
+

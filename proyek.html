@@ -296,6 +296,21 @@
             </button>
           </form>
 
+          <!-- Topbar Search -->
+          <form
+            class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search here..."
+                    aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-light" type="button">
+                        <!-- <i class="fas fa-search fa-sm"></i> -->
+                        <img src="./assets/icons/search.png" alt="search" width="20px">
+                    </button>
+                </div>
+            </div>
+          </form>
+
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
@@ -394,22 +409,15 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 heading-1 px-3">Proyek</h1>
+          <div class="px-4">
             <div class="card border-0 mb-4">
-              <div class="card-header border-0 py-3 bg-white">
-                <span class="heading-2">Data Proyek</span>
-                <form class="d-none d-sm-inline-block form-inline float-right mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search here..."
-                        aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-light" type="button">
-                          <!-- <i class="fas fa-search fa-sm"></i> -->
-                          <img src="./assets/icons/search.png" alt="search" width="20px">
-                      </button>
-                    </div>
-                  </div>
-                </form>
+              <div class="card-header border-0 py-3">
+                <h6 class="m-0 heading-2">Data Proyek</h6>
               </div>
+
+
+
+
               <div class="table-responsive p-3">
                 <table class="table fold-table" id="dataTable" width="100%" cellspacing="0">
                   <thead>
@@ -533,7 +541,7 @@
                 </table>
               </div>
             </div>
-        
+          </div>
           <!-- DataTales Example -->
 
         </div>
@@ -646,11 +654,14 @@
   </script>
 
   <script>
+    // Manipulasi Mark as read
     $(function () {
       $(".icon-background").on("click", function () {
-        $(this).toggleClass('bg-primary bg-success');
+        $(".icon-background").removeClass("bg-primary");
+        $(".icon-background").addClass("bg-success");
       });
     });
+    // Akhir Manipulasi Mark as read
     
     // Manipulasi Review Sidebar
     var menu_btn = document.querySelector("#menu-btn")
@@ -672,7 +683,6 @@
     menu_btn_2.addEventListener("click", () => {
       sidebar.classList.toggle("active-nav")
     })
-
     // Akhir Manipulasi Review Sidebar
 
 

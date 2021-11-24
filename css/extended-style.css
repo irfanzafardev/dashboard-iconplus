@@ -258,4 +258,21 @@
   max-height: 32px;
   font-size: 14px;
 }
+
+.check-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.check-icon a {
+  border-radius: 30px;
+  width: 24px;
+  height: 24px;
+}
+
+.check-icon a .fa-check {
+  padding: 2px 0 0 0;
+  color: #fff;
+  font-size: 10px;
+}
 /*# sourceMappingURL=extended-style.css.map */
