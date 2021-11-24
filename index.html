@@ -461,7 +461,7 @@
                             <div class="chart-area d-flex justify-content-center">
                                 <div id="jml_aset"></div>
                                 <!-- <img class="img-fluid" src="./img/chart-1.png" alt="" width="500px"> -->
-                                <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/">Charts by ZingChart</a></div>
+                                <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/"></a></div>
                             </div>
                         </div>
                     </div>
@@ -484,7 +484,7 @@
                           <div class="chart-area d-flex justify-content-center">
                               <div id="jml_aset"></div>
                               <!-- <img class="img-fluid" src="./img/chart-1.png" alt="" width="500px"> -->
-                              <div id='myChart1'><a class="zc-ref" href="https://www.zingchart.com/">Charts by ZingChart</a></div>
+                              <div id='myChart1'><a class="zc-ref" href="https://www.zingchart.com/"></a></div>
                           </div>
                       </div>
                   </div>
@@ -514,11 +514,23 @@
             
           </div>
           <!-- Begin Page Content -->
-          <div class="container-fluid">
+          <div class="container-fluid py-4">
             <!-- DataTales Example -->
             <div class="card border-0 mb-4">
-              <div class="card-header border-0 py-3">
+              <div class="card-header border-0 py-3 bg-white">
                 <span class="heading-2">Data Monitoring</span>
+                <form class="d-none d-sm-inline-block form-inline float-right mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search here..."
+                          aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-light" type="button">
+                            <!-- <i class="fas fa-search fa-sm"></i> -->
+                            <img src="./assets/icons/search.png" alt="search" width="20px">
+                        </button>
+                      </div>
+                    </div>
+                  </form>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -526,13 +538,10 @@
                     <thead>
                       <tr>
                         <th>No</th>
-                        <th>Nama Pegawai</th>
+                        <th>Nama Program</th> <!--Nama program itu nama pekerjaan-->
+                        <th>Nama Proyek</th> <!--NAma proyek itu Uraian Kegiatan-->
                         <th>Tanggal</th>
-                        <th>Nama Pekerjaan</th>
-                        <th>Uraian Kegiatan</th>
-                        <th>Durasi</th>
                         <th>Progress</th>
-                        <th>Catatan</th>
                         <th>Kendala</th>
                         <th>Action</th>
                       </tr>
@@ -540,11 +549,9 @@
                     <tbody>
                       <tr>
                         <td class="align-middle">1</td>
-                        <td class="align-middle">Azzahra Ramadiana</td>
-                        <td class="align-middle">2021-11-17</td>
                         <td class="align-middle">Instalasi Jaringan</td>
                         <td class="align-middle">Memasang Kabel LAN</td>
-                        <td class="align-middle">17 Hari</td>
+                        <td class="align-middle">2021-11-17</td>
                         <td class="align-middle">
                           <div class="progress">
                             <div class="progress-done" data-done="34" time-left="10">
@@ -552,7 +559,6 @@
                             </div>
                           </div>
                         </td>
-                        <td class="align-middle">Kabel LAN belum terpasang</td>
                         <td class="align-middle">Kabel LAN kurang</td>
                         <td><button type="button" class="btn btn-blue text-white" id="menu-btn">Review</button></td>
                       </tr>
